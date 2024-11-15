@@ -1,6 +1,6 @@
 # Material de estudos sobre python
 
-<img src="Savings-bro.png">
+<img src="https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?t=st=1731702342~exp=1731705942~hmac=452a071b75b852b11e07d2877d91a8485b27a31c54e2298821bda15091593c41&w=740" >
 
 > Material criado a partir das aulas de Python presentes no bootcamp NTT DATA - Engenharia de Dados com Python disponível na plataforma [DIO](https://web.dio.me/home).
 
