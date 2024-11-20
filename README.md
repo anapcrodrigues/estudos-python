@@ -16,6 +16,13 @@ Não se aplica.
 
 ## 📝 Estrutura de dados
 
+Conteúdo abordado:
+- Listas
+- Tuplas
+- Conjuntos
+- Dicionários
+- Objetos *date*, *datetime* e *time*
+
 ### Listas
 
 Listas em Python podem armazenar de maneira sequencial qualquer tipo de objeto. 
@@ -901,6 +908,31 @@ del contatos["chappie@gmail.com"]
 
 # {'guilherme@gmail.com': {'nome': 'Guilherme'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3443-2121'}, 'melaine@gmail.com': {'nome': 'Melaine', 'telefone': '3333-7766'}}  # noqa
 print(contatos)
+```
+
+### Lidando com date, datetime e time
+
+#### Módulo datetime
+O módulo 'datetime' é usado para lidar com datas e horas.
+
+```python
+from datetime import date, datetime, time
+
+d = date(2024, 11, 1)
+print(d)
+
+print(date.today())
+
+data_hora = datetime(2024, 11, 1, 16, 40, 0)
+print(data_hora)
+
+data_hora = datetime(2024, 11, 1)
+print(data_hora)
+
+print(datetime.today())
+
+hora = time(10, 20, 0)
+print(hora)
 ```
 
 ## 📫 Contribuindo para o projeto
