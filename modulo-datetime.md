@@ -1,5 +1,13 @@
-# módulo datetime
-from datetime import date, datetime, time, timedelta
+# Lidando com date, datetime e time
+
+## Módulo datetime
+
+[Documentação](https://docs.python.org/pt-br/3.13/library/datetime.html#)
+
+O módulo 'datetime' é usado para lidar com datas e horas.
+
+```python
+from datetime import date, datetime, time
 
 d = date(2024, 11, 1)
 print(d)
@@ -16,11 +24,18 @@ print(datetime.today())
 
 hora = time(10, 20, 0)
 print(hora)
+```
 
-# timedelta
-print('-> timedelta')
+## timedelta
 
-# from datetime import timedelta 
+[Documentação](https://docs.python.org/pt-br/3.13/library/datetime.html#timedelta-objects)
+
+Classe utilizada para criar e manipular objetos date, time e datetime de várias maneiras. Por exemplo, podemos adicionar e subtrair datas, verificar a diferença entre datas e muito mais.
+
+As operações suportadas envolvem apenas objetos com tipo datetime.
+
+```python
+ from datetime import timedelta, datetime, date
 
 # criando data e hora
 d = datetime(2023, 7, 19, 13, 45)
@@ -53,36 +68,39 @@ resultado = datetime(2023, 7, 25, 10, 19, 20) - timedelta(hours=1)
 print(resultado.time())
 
 print(datetime.now().date())
+```
 
+## Conversão e formatação de datas e horas
 
-# Conversão e formatação
-print('-> Conversão e formatação')
-# from datetime import datetime
+[Documentação](https://docs.python.org/pt-br/3.13/library/datetime.html#strftime-and-strptime-behavior)
 
+Python permite converter e formatar datas e horas atravé dos métodos 'strftime' (string format time) e 'strptime' (string parse time).
+
+### strftime
+É o método utilizado para alterar o formato de um objeto tipo datetime.
+
+```python
+from datetime import datetime
 # strftime
 d = datetime.now()
-
 # formatando data e hora
 print(d.strftime("%d/%m/%Y %H:%M")) # dd/mm/aaaa hh:mm
+```
 
-# strptime
-# from datetime import datetime
+### strptime
+É o método utilizado para converter um objeto tipo string para datetime.
+
+```python
+from datetime import datetime
 d = datetime.now()
 # convertendo string para datetime
 date_string = "20/07/2023 15:30"
 d = datetime.strptime(date_string, "%d/%m/%Y %H:%M")
 print(d) # 2023-07-20 15:30:00
+```
+
+## Timezone
+
+Quando trabalhamos com data e hora precisamos lidar com fusos horários. Python facilita isso através do módulo 'pytz'.
 
 
-# from datetime import datetime
-
-data_hora_atual = datetime.now()
-data_hora_str = "2023-10-20 10:20"
-mascara_ptbr = "%d/%m/%Y %a"
-mascara_en = "%Y-%m-%d %H:%M"
-
-print(data_hora_atual.strftime(mascara_ptbr))
-
-data_convertida = datetime.strptime(data_hora_str, mascara_en)
-print(data_convertida)
-print(type(data_convertida))
